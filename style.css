@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+    overflow-x: hidden;
+}
+
+h1, h2, p {
+    text-align: center;
+    color: #4a2c2a;
+}
+
+/* Globos animados */
+.globo {
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    background: #ff6f91;
+    border-radius: 50%;
+    animation: flotar 8s infinite ease-in-out;
+    opacity: 0.8;
+}
+
+.globo::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 40px;
+    background: #333;
+    left: 50%;
+    top: 80px;
+}
+
+@keyframes flotar {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-120px); }
+    100% { transform: translateY(0); }
+}
+
+/* Pastel */
+.pastel {
+    width: 200px;
+    margin: 40px auto;
+    animation: aparecer 2s ease-in-out;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: scale(0.5); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Sección regalo */
+.regalo-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.regalo-img {
+    width: 200px;
+    transition: transform 0.4s;
+    cursor: pointer;
+}
+
+.regalo-img:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Boletos */
+.boletos-container {
+    margin-top: 30px;
+    display: none;
+}
+
+.boleto {
+    width: 250px;
+    margin: 10px auto;
+    display: block;
+    animation: aparecer 1.5s ease-in-out;
+}
+
+/* Mensaje cine */
+.mensaje-cine {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #4a2c2a;
+    display: none;
+    animation: escribir 3s steps(40);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #4a2c2a;
+    width: 0;
+}
+
+@keyframes escribir {
+    from { width: 0; }
+    to { width: 100%; }
+}
