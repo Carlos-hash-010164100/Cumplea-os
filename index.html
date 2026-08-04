@@ -3,38 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feliz Cumpleaños Amor</title>
+    <title>Tu Regalo Amor</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Audio -->
-    <audio id="audio" src="imagenes/audio.mp3"></audio>
+    <div class="container">
+        <h1>🎁 Tu sorpresa especial</h1>
+        <p>Haz clic en la bolsa para ver tu regalo...</p>
 
-    <!-- Canvas globos -->
-    <canvas id="canvas-globos"></canvas>
-
-    <h1>🎉 Feliz Cumpleaños Amor 🎉</h1>
-    <p class="intro-text">Hoy celebramos tu vida, tu luz y todo lo que eres para mí.</p>
-
-    <!-- Pastel -->
-    <img src="imagenes/pastel.png" alt="Pastel de cumpleaños" class="pastel">
-
-    <!-- Sección regalo -->
-    <div class="regalo-section">
-        <h2>Tu regalo especial 🎁</h2>
-        <p>Haz clic en la bolsa para descubrir tu sorpresa...</p>
-
-        <img src="imagenes/regalo.png" alt="Bolsa de regalo" class="regalo-img" id="regalo">
-
-        <!-- Boletos -->
-        <div id="boletos" class="boletos-container"></div>
-
-        <!-- Mensaje cine -->
-        <div id="mensaje-cine" class="mensaje-cine"></div>
+        <img src="imagenes/regalo.png" class="regalo-img" id="regalo">
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById("regalo").addEventListener("click", () => {
+            window.location.href = "folios.html";
+        });
+    </script>
+
 </body>
 </html>
+
