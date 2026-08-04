@@ -1,12 +1,3 @@
-/* AUDIO */
-window.addEventListener("load", () => {
-    const audio = document.getElementById("audio");
-    audio.volume = 0.7;
-    audio.play().catch(() => {
-        console.log("Autoplay bloqueado por el navegador.");
-    });
-});
-
 /* CANVAS GLOBOS */
 const canvas = document.getElementById("canvas-globos");
 const ctx = canvas.getContext("2d");
@@ -53,38 +44,3 @@ function animarGlobos() {
 }
 
 animarGlobos();
-
-/* REGALO → MOSTRAR BOLETOS */
-document.getElementById("regalo").addEventListener("click", () => {
-
-    const boletosDiv = document.getElementById("boletos");
-    const mensajeCine = document.getElementById("mensaje-cine");
-
-    boletosDiv.style.display = "block";
-
-    boletosDiv.innerHTML = `
-        <div class="boleto">
-            <img src="imagenes/cine.png">
-            <h3>Cinépolis</h3>
-            <p>Folio: (Aquí va tu folio 1)</p>
-            <p>Válido en taquilla</p>
-        </div>
-
-        <div class="boleto">
-            <img src="imagenes/cine.png">
-            <h3>Cinépolis</h3>
-            <p>Folio: (Aquí va tu folio 2)</p>
-            <p>Válido en taquilla</p>
-        </div>
-
-        <div class="boleto">
-            <img src="imagenes/cine.png">
-            <h3>Cinépolis</h3>
-            <p>Folio: (Aquí va tu folio 3)</p>
-            <p>Válido en taquilla</p>
-        </div>
-    `;
-
-    mensajeCine.style.display = "block";
-    mensajeCine.textContent = "Tienes una cita en el cine para el próximo fin de semana ❤️";
-});
