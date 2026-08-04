@@ -1,18 +1,22 @@
-// Reproducir audio al entrar
+/* AUDIO */
 window.addEventListener("load", () => {
     const audio = document.getElementById("audio");
     audio.volume = 0.7;
     audio.play().catch(() => {
-        console.log("El navegador bloqueó la reproducción automática.");
+        console.log("Autoplay bloqueado por el navegador.");
     });
 });
 
-// Globos en canvas
+/* CANVAS GLOBOS */
 const canvas = document.getElementById("canvas-globos");
 const ctx = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
 
 let globos = [];
 
@@ -20,13 +24,13 @@ function crearGlobo() {
     return {
         x: Math.random() * canvas.width,
         y: canvas.height + 50,
-        r: 20 + Math.random() * 20,
+        r: 15 + Math.random() * 25,
         color: `hsl(${Math.random()*360}, 80%, 70%)`,
         velocidad: 1 + Math.random() * 2
     };
 }
 
-for (let i = 0; i < 20; i++) globos.push(crearGlobo());
+for (let i = 0; i < 25; i++) globos.push(crearGlobo());
 
 function animarGlobos() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -50,7 +54,7 @@ function animarGlobos() {
 
 animarGlobos();
 
-// Evento clic en el regalo
+/* REGALO → MOSTRAR BOLETOS */
 document.getElementById("regalo").addEventListener("click", () => {
 
     const boletosDiv = document.getElementById("boletos");
