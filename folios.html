@@ -9,27 +9,29 @@
 
 <body>
 
-    <!-- Audio con truco para reproducirse -->
-    <audio id="audio" src="imagenes/audio.mp3"></audio>
-
-    <script>
-        // Truco para reproducir audio en móviles
-        document.addEventListener("click", () => {
-            const audio = document.getElementById("audio");
-            audio.volume = 0.7;
-            audio.play();
-        }, { once: true });
-    </script>
-
     <div class="container">
 
         <h1>🎬 Tu cita en el cine</h1>
 
-        <img src="imagenes/cine.png" class="cine-img">
-
         <p class="mensaje">
             Tienes una cita en el cine para el próximo fin de semana ❤️
         </p>
+
+        <!-- Botón para reproducir audio -->
+        <button id="btnAudio" class="btn-audio">🔊 Reproducir audio</button>
+
+        <audio id="audio" src="imagenes/audio.mp3"></audio>
+
+        <script>
+            document.getElementById("btnAudio").addEventListener("click", () => {
+                const audio = document.getElementById("audio");
+                audio.volume = 0.7;
+                audio.play();
+            });
+        </script>
+
+        <h2 class="subtitulo">Cómo cambiar tus folios en Cinépolis</h2>
+        <img src="imagenes/cine.png" class="cine-img-small">
 
         <div class="tickets">
 
