@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tus Boletos Amor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Audio con truco para reproducirse -->
+    <audio id="audio" src="imagenes/audio.mp3"></audio>
+
+    <script>
+        // Truco para reproducir audio en móviles
+        document.addEventListener("click", () => {
+            const audio = document.getElementById("audio");
+            audio.volume = 0.7;
+            audio.play();
+        }, { once: true });
+    </script>
+
+    <div class="container">
+
+        <h1>🎬 Tu cita en el cine</h1>
+
+        <img src="imagenes/cine.png" class="cine-img">
+
+        <p class="mensaje">
+            Tienes una cita en el cine para el próximo fin de semana ❤️
+        </p>
+
+        <div class="tickets">
+
+            <div class="ticket">
+                <h3>Cinépolis</h3>
+                <p>Folio: (folio 1)</p>
+                <p>Válido en taquilla</p>
+            </div>
+
+            <div class="ticket">
+                <h3>Cinépolis</h3>
+                <p>Folio: (folio 2)</p>
+                <p>Válido en taquilla</p>
+            </div>
+
+            <div class="ticket">
+                <h3>Cinépolis</h3>
+                <p>Folio: (folio 3)</p>
+                <p>Válido en taquilla</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
