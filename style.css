@@ -1,36 +1,44 @@
+/* GENERAL */
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(to bottom, #5a3ea6, #2e1f63);
-    overflow: hidden;
+    overflow-x: hidden;
     color: #f5e9ff;
-}
-
-h1, h2, p {
     text-align: center;
 }
 
-/* Pastel */
+h1 {
+    font-size: 2.2rem;
+    margin-top: 30px;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    padding: 0 20px;
+}
+
+/* PASTEL */
 .pastel {
-    width: 200px;
-    margin: 40px auto;
+    width: 180px;
+    margin: 30px auto;
     display: block;
     animation: aparecer 2s ease-in-out;
 }
 
+/* ANIMACIÓN */
 @keyframes aparecer {
     from { opacity: 0; transform: scale(0.5); }
     to { opacity: 1; transform: scale(1); }
 }
 
-/* Sección regalo */
+/* REGALO */
 .regalo-section {
-    margin-top: 50px;
-    text-align: center;
+    margin-top: 40px;
 }
 
 .regalo-img {
-    width: 200px;
+    width: 180px;
     transition: transform 0.4s;
     cursor: pointer;
 }
@@ -39,35 +47,35 @@ h1, h2, p {
     transform: scale(1.1) rotate(5deg);
 }
 
-/* Boletos estilo Cinépolis */
+/* BOLETOS */
 .boletos-container {
     margin-top: 30px;
     display: none;
 }
 
 .boleto {
-    width: 300px;
+    width: 90%;
+    max-width: 320px;
     margin: 15px auto;
     padding: 15px;
     background: #0a1a3a;
     border: 3px solid #ffd700;
     border-radius: 12px;
     color: white;
-    font-family: 'Montserrat';
     text-align: center;
     box-shadow: 0 0 15px #ffd700;
     animation: aparecer 1.5s ease-in-out;
 }
 
 .boleto img {
-    width: 80px;
+    width: 70px;
     margin-bottom: 10px;
 }
 
-/* Mensaje cine */
+/* MENSAJE CINE */
 .mensaje-cine {
     margin-top: 20px;
-    font-size: 22px;
+    font-size: 1.3rem;
     display: none;
     animation: escribir 3s steps(40);
     white-space: nowrap;
@@ -81,7 +89,7 @@ h1, h2, p {
     to { width: 100%; }
 }
 
-/* Canvas globos */
+/* CANVAS */
 #canvas-globos {
     position: fixed;
     top: 0;
@@ -91,3 +99,30 @@ h1, h2, p {
     z-index: -1;
 }
 
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .intro-text {
+        font-size: 1rem;
+    }
+
+    .pastel {
+        width: 150px;
+    }
+
+    .regalo-img {
+        width: 150px;
+    }
+
+    .boleto {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    .mensaje-cine {
+        font-size: 1.1rem;
+    }
+}
