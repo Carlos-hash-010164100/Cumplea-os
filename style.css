@@ -1,128 +1,85 @@
-/* GENERAL */
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(to bottom, #5a3ea6, #2e1f63);
-    overflow-x: hidden;
     color: #f5e9ff;
     text-align: center;
 }
 
+.container {
+    padding: 20px;
+}
+
 h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-top: 30px;
 }
 
-.intro-text {
+p {
     font-size: 1.2rem;
-    padding: 0 20px;
 }
 
-/* PASTEL */
-.pastel {
-    width: 180px;
-    margin: 30px auto;
-    display: block;
-    animation: aparecer 2s ease-in-out;
-}
-
-/* ANIMACIÓN */
-@keyframes aparecer {
-    from { opacity: 0; transform: scale(0.5); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-/* REGALO */
-.regalo-section {
-    margin-top: 40px;
-}
-
+/* Imagen del regalo */
 .regalo-img {
-    width: 180px;
-    transition: transform 0.4s;
+    width: 200px;
+    margin-top: 40px;
     cursor: pointer;
+    transition: transform 0.3s;
 }
 
 .regalo-img:hover {
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.1);
 }
 
-/* BOLETOS */
-.boletos-container {
-    margin-top: 30px;
-    display: none;
-}
-
-.boleto {
+/* Imagen cine */
+.cine-img {
     width: 90%;
-    max-width: 320px;
-    margin: 15px auto;
-    padding: 15px;
+    max-width: 350px;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Tickets */
+.tickets {
+    margin-top: 30px;
+}
+
+.ticket {
     background: #0a1a3a;
     border: 3px solid #ffd700;
     border-radius: 12px;
-    color: white;
-    text-align: center;
+    padding: 15px;
+    width: 90%;
+    max-width: 300px;
+    margin: 15px auto;
     box-shadow: 0 0 15px #ffd700;
-    animation: aparecer 1.5s ease-in-out;
 }
 
-.boleto img {
-    width: 70px;
-    margin-bottom: 10px;
+.ticket h3 {
+    margin: 0;
+    font-size: 1.4rem;
 }
 
-/* MENSAJE CINE */
-.mensaje-cine {
-    margin-top: 20px;
-    font-size: 1.3rem;
-    display: none;
-    animation: escribir 3s steps(40);
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid #ffd700;
-    width: 0;
+.ticket p {
+    margin: 5px 0;
 }
 
-@keyframes escribir {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
-/* CANVAS */
-#canvas-globos {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-/* RESPONSIVE */
+/* Responsivo */
 @media (max-width: 600px) {
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
-    .intro-text {
+    p {
         font-size: 1rem;
-    }
-
-    .pastel {
-        width: 150px;
     }
 
     .regalo-img {
         width: 150px;
     }
 
-    .boleto {
+    .ticket {
         padding: 12px;
-        font-size: 0.9rem;
-    }
-
-    .mensaje-cine {
-        font-size: 1.1rem;
     }
 }
+
